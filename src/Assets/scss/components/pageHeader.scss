@@ -1,0 +1,30 @@
+@use "../utils" as *;
+
+.page-header {
+  width: 100%;
+  height: rem(240);
+  background-color: $gray-background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    font-size: rem(36);
+    margin-bottom: rem(5);
+    font-weight: 500;
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    gap: rem(6);
+    font-size: rem(15);
+    font-weight: 400;
+    opacity: 0.4;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

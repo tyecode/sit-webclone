@@ -1,0 +1,123 @@
+@use "../utils" as *;
+
+* {
+  color: $black-color;
+  font-family: "Noto Sans Lao", sans-serif;
+  letter-spacing: none;
+}
+
+.about-section {
+  .display-1 {
+    color: $nice-blue-color;
+    font-size: rem(50);
+    text-align: center;
+    margin: rem(50);
+  }
+
+  .display-2 {
+    position: relative;
+    font-size: rem(42);
+    font-weight: 700;
+  }
+
+  .display-2::after {
+    content: "";
+    width: rem(64);
+    height: rem(8);
+    background-color: $nice-blue-color;
+    position: absolute;
+    top: rem(70);
+    left: 0;
+  }
+}
+
+.news-board {
+  .display-1 {
+    font-size: rem(32);
+    font-weight: 400;
+    color: $nice-blue-color;
+    text-align: center;
+    margin: rem(20) 0;
+
+    span {
+      color: $white-color;
+      background-color: $nice-blue-color;
+      padding: 0 rem(6);
+    }
+  }
+
+  .display-2 {
+    position: relative;
+    font-size: rem(25);
+    font-weight: 700;
+    text-align: center;
+    margin: rem(20) 0 rem(40) 0;
+  }
+
+  .display-2::after {
+    content: "";
+    width: rem(64);
+    height: rem(8);
+    background-color: $nice-blue-color;
+    position: absolute;
+    top: rem(42);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .display-3 {
+    font-size: rem(18);
+    font-weight: 700;
+    color: $white-color;
+  }
+}
+
+.display-4 {
+  font-size: rem(16);
+  font-weight: 400;
+  color: $black-color;
+}
+
+.activity-section {
+  .display-2 {
+    position: relative;
+    font-size: rem(25);
+    font-weight: 700;
+    text-align: center;
+    margin: rem(20) 0 rem(40) 0;
+    color: $white-color;
+  }
+
+  .display-2::after {
+    content: "";
+    width: rem(64);
+    height: rem(8);
+    background-color: $white-color;
+    position: absolute;
+    top: rem(42);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .institutional-activity {
+    .display-2 {
+      position: relative;
+      font-size: rem(25);
+      font-weight: 700;
+      text-align: center;
+      margin: rem(20) 0 rem(40) 0;
+      color: $black-color;
+    }
+
+    .display-2::after {
+      content: "";
+      width: rem(64);
+      height: rem(8);
+      background-color: $nice-blue-color;
+      position: absolute;
+      top: rem(42);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

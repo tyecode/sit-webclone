@@ -1,0 +1,102 @@
+@use "../utils" as *;
+
+.footer {
+  width: 100%;
+  background-color: $dark-color;
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    gap: rem(50);
+
+    .col {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 45% 45%;
+      gap: rem(50);
+    }
+
+    .col-link {
+      width: 100%;
+      padding: rem(50) 0;
+      padding-bottom: rem(30);
+
+      &__title {
+        font-size: rem(16);
+        font-weight: 700;
+        color: $white-color;
+        margin-bottom: rem(8);
+      }
+
+      &__wrapper {
+        position: relative;
+        width: 100%;
+
+        ul {
+          width: 100%;
+
+          li {
+            width: 100%;
+            border-bottom: rem(1) solid #8b8d9430;
+            padding: rem(10) 0;
+            cursor: pointer;
+
+            a {
+              font-size: rem(15);
+              font-weight: 400;
+              color: $font-gray-color;
+
+              &:hover {
+                @include background-gradient;
+                background-clip: text;
+                color: transparent;
+              }
+            }
+
+            &:last-child {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+
+    .col:last-child {
+      .col-link {
+        &__wrapper {
+          padding-top: rem(10);
+
+          ul {
+            li {
+              border: 0;
+              padding: rem(5);
+
+              a {
+                color: $white-color;
+
+                &:hover {
+                  @include background-gradient;
+                  background-clip: text;
+                  color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    width: 100%;
+    border-top: rem(1) solid #8b8d9430;
+    padding: rem(25) 0;
+
+    p {
+      color: $white-color;
+      font-family: "Roboto", sans-serif;
+      font-size: rem(13);
+      font-weight: 300;
+    }
+  }
+}

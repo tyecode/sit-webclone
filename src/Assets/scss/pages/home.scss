@@ -1,0 +1,246 @@
+@use "../utils" as *;
+
+.Home {
+  width: 100%;
+
+  .header-section {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    &__list {
+      border-bottom: rem(1) solid $gray-color-light;
+      padding: rem(70) 0;
+      display: flex;
+      flex-direction: column;
+      gap: rem(40);
+
+      .row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: rem(30);
+
+        &:last-child {
+          h1 {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .about-section {
+    width: 100%;
+    padding: rem(10) 0;
+
+    .about-items {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: rem(40);
+
+      .item-wrapper {
+        min-width: rem(260);
+        padding: rem(10);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(20);
+
+        .item {
+          position: relative;
+          width: rem(150);
+          height: rem(150);
+          border-radius: 50%;
+          background-color: $nice-blue-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          overflow: hidden;
+          transition: all 0.3s;
+          @include item-hover-gradient;
+
+          i {
+            color: $white-color;
+            font-size: rem(80);
+            z-index: 5;
+          }
+        }
+
+        .item:hover {
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px;
+
+          i {
+            color: $nice-blue-color;
+            transition: all 0.3s;
+          }
+        }
+
+        p {
+          font-size: rem(20);
+          font-weight: 700;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 65% 35%;
+      gap: rem(30);
+      margin: rem(30) 0;
+    }
+
+    &__img {
+      img {
+        width: 100%;
+      }
+    }
+
+    &__info {
+      h1 {
+        text-align: center;
+        font-size: rem(46);
+        font-weight: 700;
+        margin-bottom: rem(18);
+
+        &::after {
+          width: rem(50);
+          top: rem(80);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      h3 {
+        text-align: center;
+        margin: rem(6);
+        font-weight: 700;
+      }
+
+      p {
+        text-align: justify;
+        overflow-wrap: break-word;
+
+        a {
+          color: $link-color;
+          text-decoration: underline;
+        }
+      }
+
+      h2,
+      h3,
+      p {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .activity-section {
+    width: 100%;
+
+    .institutional-activity {
+      width: 100%;
+      position: relative;
+      margin: rem(50) 0;
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: 40% 56%;
+        gap: rem(15);
+
+        .col:first-child {
+          width: 100%;
+          height: fit-content;
+          border-right: rem(2) solid $black-color;
+
+          p {
+            text-align: center;
+            margin-top: rem(-28);
+            opacity: 0.6;
+            margin-bottom: rem(10);
+          }
+        }
+
+        .col:last-child {
+          width: 100%;
+          border: none;
+          display: grid;
+          grid-template-columns: 45% 45%;
+          gap: rem(100);
+          row-gap: rem(30);
+        }
+
+        .content-wrapper {
+          width: 100%;
+          display: grid;
+          grid-template-columns: rem(80) 80%;
+
+          .content-img {
+            position: relative;
+            max-width: rem(60);
+            max-height: rem(60);
+            overflow: hidden;
+            cursor: pointer;
+            margin-top: rem(6);
+
+            img {
+              object-fit: cover;
+              width: 100%;
+              min-height: 100%;
+            }
+
+            .overlay {
+              width: 100%;
+              height: 100%;
+              @include background-gradient;
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+              transition: opacity 0.5s ease;
+
+              &:hover {
+                opacity: 0.3;
+              }
+            }
+          }
+
+          .content-info {
+            width: 100%;
+
+            &__title {
+              margin-bottom: rem(10);
+              cursor: pointer;
+
+              p {
+                overflow-wrap: break-word;
+
+                &:hover {
+                  @include background-gradient;
+                  background-clip: text;
+                  color: transparent;
+                }
+              }
+            }
+
+            &__date {
+              font-size: rem(13);
+              font-weight: 500;
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+    }
+  }
+}

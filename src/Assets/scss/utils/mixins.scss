@@ -1,0 +1,126 @@
+@use "./variables.scss" as *;
+
+@mixin background-gradient {
+  background-image: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);
+}
+
+@mixin background-gradient-hover {
+  background-image: linear-gradient(135deg, #1ebbf012 30%, #39dfab12 100%);
+}
+
+@mixin overlay-gradient {
+  background: $nice-blue-color;
+  background: linear-gradient(
+    0deg,
+    $nice-blue-color 0%,
+    rgba(123, 220, 181, 0) 100%
+  );
+}
+
+@mixin button-hover-gradient {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    transition: opacity 0.3s;
+  }
+
+  &::before {
+    background-image: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);
+    opacity: 1;
+  }
+
+  &::after {
+    background-image: linear-gradient(135deg, #23aadd 30%, #34c9a5 100%);
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+@mixin icon-hover-gradient {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    transition: opacity 0.3s;
+  }
+
+  &::before {
+    background-color: $gray-color-light;
+    opacity: 1;
+  }
+
+  &::after {
+    background-image: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+@mixin item-hover-gradient {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    transition: opacity 0.3s;
+  }
+
+  &::before {
+    background-image: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);
+    opacity: 1;
+  }
+
+  &::after {
+    background-color: $white-color;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+@mixin course-hover-gradient {
+  background: rgb(223, 0, 169);
+  background: linear-gradient(
+    215deg,
+    rgba(223, 0, 169, 1) 0%,
+    rgba(148, 0, 255, 1) 25%,
+    rgba(10, 132, 255, 1) 65%,
+    rgba(18, 188, 0, 1) 100%
+  );
+}
+
+@mixin box-shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

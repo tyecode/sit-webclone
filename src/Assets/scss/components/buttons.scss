@@ -1,0 +1,114 @@
+@use "../utils" as *;
+
+.header-section {
+  button {
+    position: relative;
+    width: 100%;
+    height: rem(50);
+    border: none;
+    border-radius: rem(110);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    @include button-hover-gradient;
+
+    p {
+      color: $white-color;
+      font-size: rem(24);
+      font-weight: 700;
+      white-space: nowrap;
+      z-index: 5;
+    }
+  }
+}
+
+.about-section__info {
+  .button-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: rem(40) 0;
+
+    button {
+      position: relative;
+      width: rem(200);
+      height: rem(54);
+      background-color: transparent;
+      border: rem(1) solid $nice-blue-color;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: rem(14);
+
+      &:first-child {
+        border-right: none;
+      }
+
+      &:first-child::after {
+        content: "";
+        width: rem(24);
+        height: rem(24);
+        border-radius: 50%;
+        background-color: $black-color;
+        position: absolute;
+        right: rem(-12);
+        z-index: 5;
+      }
+
+      i {
+        font-size: rem(20);
+      }
+
+      span {
+        font-size: rem(15);
+      }
+
+      i,
+      span {
+        color: $nice-blue-color;
+        z-index: 19;
+        transition: all 0.6s ease-in-out;
+      }
+
+      .slide-left,
+      .slide-right {
+        width: 0;
+        height: 100%;
+        background-color: $nice-blue-color;
+        position: absolute;
+        transition: all 0.6s ease-in-out;
+        opacity: 0;
+      }
+
+      .slide-left {
+        top: 0;
+        right: 0;
+      }
+
+      .slide-right {
+        top: 0;
+        left: 0;
+      }
+
+      &:hover {
+        i,
+        span {
+          color: $white-color;
+        }
+
+        .slide-left,
+        .slide-right {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

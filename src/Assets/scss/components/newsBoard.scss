@@ -1,0 +1,56 @@
+@use "../utils" as *;
+
+.news-board {
+  display: block;
+  width: 100%;
+  padding-bottom: rem(50);
+
+  .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+
+    .institutional-news {
+      background-color: #fff;
+    }
+
+    .notice {
+      padding-left: rem(30);
+
+      &-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+      }
+
+      &-content {
+        display: grid;
+        grid-template-columns: rem(60) 80%;
+        gap: rem(20);
+
+        &-img {
+          width: rem(60);
+          height: rem(60);
+          border-radius: 50%;
+          overflow: hidden;
+          cursor: pointer;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        &-info {
+          display: flex;
+          flex-direction: column;
+          gap: rem(6);
+
+          &__date {
+            font-size: rem(13);
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
