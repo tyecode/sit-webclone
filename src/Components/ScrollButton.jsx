@@ -23,9 +23,8 @@ const ScrollButton = () => {
 
   return (
     <button
-      className="scroll-button"
+      className={visible ? "scroll-button" : "scroll-button-hide"}
       onClick={scrollToTop}
-      style={{ display: visible ? "flex" : "none" }}
     >
       <i className="fa-solid fa-arrow-up"></i>
     </button>
