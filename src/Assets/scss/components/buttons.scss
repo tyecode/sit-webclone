@@ -112,3 +112,25 @@
     }
   }
 }
+
+.scroll-button {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: rem(40);
+  height: rem(40);
+  position: fixed;
+  bottom: rem(15);
+  right: rem(15);
+  background-color: $black-color;
+  border: none;
+  border-radius: rem(5);
+  z-index: 99;
+  opacity: 0.8;
+  cursor: pointer;
+
+  i {
+    font-size: rem(22);
+    color: $white-color;
+  }
+}

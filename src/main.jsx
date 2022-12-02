@@ -5,6 +5,7 @@ import "./Assets/scss/global.scss";
 import "swiper/css/bundle";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
+import ScrollButton from "./Components/ScrollButton";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -12,5 +13,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <ScrollToTop />
       <App />
     </BrowserRouter>
+    <ScrollButton />
   </React.StrictMode>
 );
